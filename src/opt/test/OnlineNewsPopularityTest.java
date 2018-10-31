@@ -21,12 +21,16 @@ import shared.SumOfSquaresError;
 public class OnlineNewsPopularityTest {
 	private static Instance[] instances = initializeInstances();
 
-    private static int inputLayer = 58, hiddenLayer1 = 5, hiddenLayer2 = 5,  outputLayer = 1, trainingIterations = 1000;
+    private static int inputLayer = 58, hiddenLayer1 = 5, hiddenLayer2 = 5,  outputLayer = 1, trainingIterations = 2000;
     private static BackPropagationNetworkFactory factory = new BackPropagationNetworkFactory();
     
     private static ErrorMeasure measure = new SumOfSquaresError();
 
     private static DataSet set = new DataSet(instances);
+    
+    private final static int NO_OF_INSTANCES = 8874;
+    
+    private final static int NO_OF_ATTRIBUTES = 58;
 
     private static BackPropagationNetwork networks[] = new BackPropagationNetwork[3];
     private static NeuralNetworkOptimizationProblem[] nnop = new NeuralNetworkOptimizationProblem[3];
@@ -40,7 +44,7 @@ public class OnlineNewsPopularityTest {
     public static void main(String[] args) {
         for(int i = 0; i < oa.length; i++) {
             networks[i] = factory.createClassificationNetwork(
-                new int[] {inputLayer, hiddenLayer1,  outputLayer});
+                new int[] {inputLayer, hiddenLayer1, hiddenLayer2, outputLayer});
             nnop[i] = new NeuralNetworkOptimizationProblem(set, networks[i], measure);
         }
 
@@ -105,20 +109,20 @@ public class OnlineNewsPopularityTest {
 
     private static Instance[] initializeInstances() {
 
-        double[][][] attributes = new double[11833][][];
+        double[][][] attributes = new double[NO_OF_INSTANCES][][];
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader(new File("src/opt/test/onn-assignment2-processed-normed.txt")));
+            BufferedReader br = new BufferedReader(new FileReader(new File("src/opt/test/onn-assignment2-train.txt")));
 
             for(int i = 0; i < attributes.length; i++) {
                 Scanner scan = new Scanner(br.readLine());
                 scan.useDelimiter(",");
 
                 attributes[i] = new double[2][];
-                attributes[i][0] = new double[58]; // 58 attributes
+                attributes[i][0] = new double[NO_OF_ATTRIBUTES]; // 58 attributes
                 attributes[i][1] = new double[1];
 
-                for(int j = 0; j < 58; j++)
+                for(int j = 0; j < NO_OF_ATTRIBUTES; j++)
                     attributes[i][0][j] = Double.parseDouble(scan.next());
 
                 attributes[i][1][0] = Double.parseDouble(scan.next());
