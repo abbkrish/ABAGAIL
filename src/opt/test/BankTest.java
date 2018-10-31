@@ -7,9 +7,6 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import com.github.sh0nk.matplotlib4j.Plot;
-import com.github.sh0nk.matplotlib4j.PlotImpl;
-
 import func.nn.backprop.BackPropagationNetwork;
 import func.nn.backprop.BackPropagationNetworkFactory;
 import opt.OptimizationAlgorithm;
