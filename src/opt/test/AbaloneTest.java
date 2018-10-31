@@ -68,6 +68,7 @@ public class AbaloneTest {
                 predicted = Double.parseDouble(instances[j].getLabel().toString());
                 actual = Double.parseDouble(networks[i].getOutputValues().toString());
 
+                	
                 double trash = Math.abs(predicted - actual) < 0.5 ? correct++ : incorrect++;
 
             }
