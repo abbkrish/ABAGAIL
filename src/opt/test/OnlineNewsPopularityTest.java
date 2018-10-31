@@ -21,7 +21,7 @@ import shared.SumOfSquaresError;
 public class OnlineNewsPopularityTest {
 	private static Instance[] instances = initializeInstances();
 
-    private static int inputLayer = 58, hiddenLayer1 = 5, hiddenLayer2 = 5,  outputLayer = 1, trainingIterations = 2000;
+    private static int inputLayer = 58, hiddenLayer1 = 5, hiddenLayer2 = 5,  outputLayer = 1, trainingIterations = 10000;
     private static BackPropagationNetworkFactory factory = new BackPropagationNetworkFactory();
     
     private static ErrorMeasure measure = new SumOfSquaresError();

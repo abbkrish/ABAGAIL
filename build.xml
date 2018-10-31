@@ -26,6 +26,10 @@
         <delete dir="${bin.dir}" />
         <delete dir="${jdocs.dir}" />
     </target>
+	
+	<target name="runonn" depends="compile">
+	       <java classname="OnlineNewsPopularityTest" fork="true"></java>
+	</target>
 
     <target name="javadoc" depends="prepare">
         <javadoc sourcepath="${src.dir}" destdir="${jdocs.dir}" additionalparam="subpackages"/>
