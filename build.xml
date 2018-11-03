@@ -27,7 +27,7 @@
         <delete dir="${jdocs.dir}" />
     </target>
 	
-	<target name="runonn" depends="compile">
+	<target name="run" depends="compile">
 	       <java classname="OnlineNewsPopularityTest" fork="true"></java>
 	</target>
 

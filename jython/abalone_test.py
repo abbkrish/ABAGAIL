@@ -5,6 +5,8 @@ or more than 15 rings.
 
 Based on AbaloneTest.java by Hannah Lau
 """
+from __future__ import with_statement
+
 import os
 import csv
 import time
@@ -17,12 +19,11 @@ import opt.RandomizedHillClimbing as RandomizedHillClimbing
 import opt.SimulatedAnnealing as SimulatedAnnealing
 import opt.ga.StandardGeneticAlgorithm as StandardGeneticAlgorithm
 
-from __future__ import with_statement
-
 INPUT_FILE = os.path.join("..", "src", "opt", "test", "abalone.txt")
 
 INPUT_LAYER = 7
 HIDDEN_LAYER = 5
+HIDDEN_LAYER1 = 6
 OUTPUT_LAYER = 1
 TRAINING_ITERATIONS = 1000
 
@@ -84,7 +85,7 @@ def main():
     results = ""
 
     for name in oa_names:
-        classification_network = factory.createClassificationNetwork([INPUT_LAYER, HIDDEN_LAYER, OUTPUT_LAYER])
+        classification_network = factory.createClassificationNetwork([INPUT_LAYER, HIDDEN_LAYER, HIDDEN_LAYER1, OUTPUT_LAYER])
         networks.append(classification_network)
         nnop.append(NeuralNetworkOptimizationProblem(data_set, classification_network, measure))
 

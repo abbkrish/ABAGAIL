@@ -185,10 +185,15 @@ public abstract class LayeredNetwork extends NeuralNetwork {
        }
        links = new ArrayList();
        links.addAll(inputLayer.getLinks());
+       System.out.println("INpute layer " + inputLayer.getLinks().size());
        for (int i = 0; i < getHiddenLayerCount(); i++) {
-           links.addAll(getHiddenLayer(i).getLinks()); 
+		   links.addAll(getHiddenLayer(i).getLinks()); 
+		   System.out.println(getHiddenLayer(i).getLinks().size());
+
        }
        links.addAll(outputLayer.getLinks());
+       System.out.println(outputLayer.getLinks().size());
+       
        return links;
     }
 
