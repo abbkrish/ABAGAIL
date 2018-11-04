@@ -35,7 +35,7 @@ public class OnlineNewsPopularitySA extends OnlineNewsPopularityBase {
 	private static NeuralNetworkOptimizationProblem nnop = null;
 
 	private static OptimizationAlgorithm oa = null;
-	private static String oaNames = "RHC";
+	private static String oaNames = "SA";
 	private static StringBuffer results = new StringBuffer("");
 
 	private static DecimalFormat df = new DecimalFormat("0.000");

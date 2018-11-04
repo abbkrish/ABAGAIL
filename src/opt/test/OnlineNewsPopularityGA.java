@@ -3,14 +3,12 @@ package opt.test;
 import java.io.IOException;
 import java.lang.Math;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import func.nn.backprop.BackPropagationNetwork;
 import func.nn.backprop.BackPropagationNetworkFactory;
 import opt.OptimizationAlgorithm;
-import opt.RandomizedHillClimbing;
 import opt.example.NeuralNetworkOptimizationProblem;
 import opt.ga.StandardGeneticAlgorithm;
 import shared.DataSet;
@@ -37,7 +35,7 @@ public class OnlineNewsPopularityGA extends OnlineNewsPopularityBase {
 	private static NeuralNetworkOptimizationProblem nnop = null;
 
 	private static OptimizationAlgorithm oa = null;
-	private static String oaNames = "RHC";
+	private static String oaNames = "GA";
 	private static StringBuffer results = new StringBuffer("");
 
 	private static DecimalFormat df = new DecimalFormat("0.000");
