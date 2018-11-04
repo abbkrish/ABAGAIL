@@ -12,8 +12,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.sun.org.glassfish.external.statistics.Statistic;
-
 import shared.DataSet;
 import shared.Instance;
 import shared.writer.CSVWriter;
