@@ -476,6 +476,7 @@ public class OtherTest {
     for (int x = 0; x < populationRatios.length; x++) {
 
       int population = (int) (Math.max(populationRatios[x] * trainingPopulation, 10));
+      System.out.println("Current population and length " +  population + " " + x + " " + populationRatios.length);
 
       for (int y = 0; y < mateRatios.length; y++) {
 
