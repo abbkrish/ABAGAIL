@@ -492,6 +492,7 @@ public class OtherTest {
           double[] validationErrors = new double[K];
 
           for (int i = 0; i < nets.length; i++) {
+        	  System.out.println("nets " + i + " " + nets.length);
 
             Instance[] validation = getValidationFold(folds, i);
             Instance[] trainFolds = getTrainFolds(folds, i);
