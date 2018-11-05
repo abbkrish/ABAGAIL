@@ -21,7 +21,7 @@ public class OnlineNewsPopularitySA extends OnlineNewsPopularityBase {
 
 	private static Instance[] testingInstances = null;
 
-	private static int inputLayer = 36, hiddenLayer1 = 4, hiddenLayer2 = 1, outputLayer = 1, trainingIterations = 3000;
+	private static int inputLayer = 36, hiddenLayer1 = 4, hiddenLayer2 = 1, outputLayer = 1, trainingIterations = 5000;
 	private static BackPropagationNetworkFactory factory = new BackPropagationNetworkFactory();
 
 	private static ErrorMeasure measure = new SumOfSquaresError();
@@ -41,9 +41,9 @@ public class OnlineNewsPopularitySA extends OnlineNewsPopularityBase {
 	private static DecimalFormat df = new DecimalFormat("0.000");
 
 	
-	private static Double temperature = 1E10;
+	private static Double temperature = 1E8;
 
-	private static Double coolingExponent = 0.999;
+	private static Double coolingExponent = 0.900;
 
 	public static void main(String[] args) throws IOException {
 
