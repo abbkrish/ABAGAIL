@@ -110,7 +110,7 @@ public class OtherTest {
    * NOTE: min(populationRations) >= max(mateRatios) + max(toMutateRatio)
    * This condition must be upheld or Exceptions will be thrown later in the script
    */
-  private static final boolean shouldFindGAParams = false;
+  private static final boolean shouldFindGAParams = true;
   private static double[] populationRatios = {0.10, 0.15, 0.20, 0.25};
   private static double[] mateRatios = {0.02, 0.04};
   private static double[] mutateRatios = {0.02, 0.04};
@@ -195,7 +195,7 @@ public class OtherTest {
     /* GA */
     if (shouldFindGAParams) {
 //      TODO: Keep this very small
-      trainIterations = 20;
+      trainIterations = 2000;
       determineGAParams(trainIterations);
 
     }
