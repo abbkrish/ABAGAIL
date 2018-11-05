@@ -195,7 +195,7 @@ public class OtherTest {
     /* GA */
     if (shouldFindGAParams) {
 //      TODO: Keep this very small
-      trainIterations = 500;
+      trainIterations = 200;
       determineGAParams(trainIterations);
 
     }
