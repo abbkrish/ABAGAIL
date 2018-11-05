@@ -91,10 +91,10 @@ public class OtherTest {
    * through until the best param configuration for simulated annealing is found.
    */
 //  TODO: Set this to false if you retained the best SA params from a previous run
-  private static final boolean shouldFindSAParams = false;
+  private static final boolean shouldFindSAParams = true;
   // TODO: Modify these to try different possible temp and cooling params
-  private static double[] temps = {1e5, 1E8, 1E10, 1E12, 1E15};
-  private static double[] coolingRates = {0.9, 0.95, 0.99, 0.999};
+  private static double[] temps = {1e5, 1E8, 1E10};
+  private static double[] coolingRates = {0.2, 0.4, 0.6, 0.8, 0.9, 0.995, 0.999};
 
   //  TODO: Place values here from previous run if you set shouldFindSAParams to false.
   private static double best_temp = 1E12;
@@ -110,7 +110,7 @@ public class OtherTest {
    * NOTE: min(populationRations) >= max(mateRatios) + max(toMutateRatio)
    * This condition must be upheld or Exceptions will be thrown later in the script
    */
-  private static final boolean shouldFindGAParams = true;
+  private static final boolean shouldFindGAParams = false;
   private static double[] populationRatios = {0.10, 0.15, 0.20, 0.25};
   private static double[] mateRatios = {0.02, 0.04};
   private static double[] mutateRatios = {0.02, 0.04};
@@ -185,8 +185,8 @@ public class OtherTest {
 
     /* SA */
     if (shouldFindSAParams) {
-      trainIterations = 100;
-      determineSAParams(2000);
+      trainIterations = 2000;
+      determineSAParams(trainIterations);
     }
     // Run actual SA with best params here
     trainIterations = 2000;
