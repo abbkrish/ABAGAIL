@@ -91,7 +91,7 @@ public class OtherTest {
    * through until the best param configuration for simulated annealing is found.
    */
 //  TODO: Set this to false if you retained the best SA params from a previous run
-  private static final boolean shouldFindSAParams = true;
+  private static final boolean shouldFindSAParams = false;
   // TODO: Modify these to try different possible temp and cooling params
   private static double[] temps = {1e5, 1E8, 1E10, 1E12, 1E15};
   private static double[] coolingRates = {0.9, 0.95, 0.99, 0.999};
