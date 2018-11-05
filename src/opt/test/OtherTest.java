@@ -91,7 +91,7 @@ public class OtherTest {
    * through until the best param configuration for simulated annealing is found.
    */
 //  TODO: Set this to false if you retained the best SA params from a previous run
-  private static final boolean shouldFindSAParams = false;
+  private static final boolean shouldFindSAParams = true;
   // TODO: Modify these to try different possible temp and cooling params
   private static double[] temps = {1e5, 1E8, 1E10, 1E12, 1E15};
   private static double[] coolingRates = {0.9, 0.95, 0.99, 0.999};
@@ -178,15 +178,15 @@ public class OtherTest {
 
 
     /* RHC */
-    trainIterations = 2000;
+    //trainIterations = 2000;
 //    RHC has no params. Just run it directly
-    runRHC(trainIterations);
+   // runRHC(trainIterations);
 
 
     /* SA */
     if (shouldFindSAParams) {
       trainIterations = 100;
-      determineSAParams(trainIterations);
+      determineSAParams(2000);
     }
     // Run actual SA with best params here
     trainIterations = 2000;
@@ -636,8 +636,8 @@ public class OtherTest {
       Vector predicted = network.getOutputValues();
       double actual_val = actual.get(0);
       double predicted_val = predicted.get(0) < 0.5 ? 0: 1;
-      System.out.println("actual " +  actual_val);
-      System.out.println("predicted " +  predicted_val);
+      //System.out.println("actual " +  actual_val);
+      //System.out.println("predicted " +  predicted_val);
 
 
       //boolean mismatch = ! isEqualOutputs(actual, predicted);
@@ -812,12 +812,12 @@ public class OtherTest {
   public static void printVectors(Vector actual, Vector expected) {
     System.out.print("Actual: [");
     for (int i = 0; i < actual.size(); i++) {
-      System.out.printf(" %f", actual.get(i));
+     // System.out.printf(" %f", actual.get(i));
     }
     System.out.print(" ] \t Expected: [");
 
     for (int i = 0; i < expected.size(); i++) {
-      System.out.printf(" %f", expected.get(i));
+      //System.out.printf(" %f", expected.get(i));
     }
     System.out.println(" ]");
   }
