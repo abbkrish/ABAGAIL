@@ -21,7 +21,7 @@ public class OnlineNewsPopularityGA extends OnlineNewsPopularityBase {
 
 	private static Instance[] testingInstances = null;
 
-	private static int inputLayer = 36, hiddenLayer1 = 4, hiddenLayer2 = 1, outputLayer = 1, trainingIterations = 5000;
+	private static int inputLayer = 36, hiddenLayer1 = 4, hiddenLayer2 = 1, outputLayer = 1, trainingIterations = 10000;
 	private static BackPropagationNetworkFactory factory = new BackPropagationNetworkFactory();
 
 	private static ErrorMeasure measure = new SumOfSquaresError();
