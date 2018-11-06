@@ -13,4 +13,4 @@ public interface Trainer extends Serializable {
      * @return the error
      */
     public abstract double train();
-}
+    }

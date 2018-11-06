@@ -19,6 +19,8 @@ public class RandomizedHillClimbing extends OptimizationAlgorithm {
      */
     private double curVal;
     
+    
+   
     /**
      * Make a new randomized hill climbing
      */

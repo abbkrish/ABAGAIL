@@ -1,5 +1,8 @@
 package opt.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import shared.Instance;
 
 /**
@@ -19,6 +22,9 @@ public class TravelingSalesmanRouteEvaluationFunction extends TravelingSalesmanE
     public TravelingSalesmanRouteEvaluationFunction(double[][] points) {
         super(points);
     }
+    
+	List<Double> valList = new ArrayList<>();
+
 
     /**
      * @see opt.EvaluationFunction#value(opt.OptimizationData)
@@ -27,10 +33,16 @@ public class TravelingSalesmanRouteEvaluationFunction extends TravelingSalesmanE
         double distance = 0;
         for (int i = 0; i < d.size() - 1; i++) {
             distance += getDistance(d.getDiscrete(i), d.getDiscrete(i+1));
+
         }
         distance += getDistance(d.getDiscrete(d.size() - 1), d.getDiscrete(0));
         return 1/distance;
     }
+    
+    public List<Double> getValList() {
+
+		return this.valList;
+	}
 
 
 }
