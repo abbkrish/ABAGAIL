@@ -40,11 +40,11 @@ public class OnlineNewsPopularityGA extends OnlineNewsPopularityBase {
 
 	private static DecimalFormat df = new DecimalFormat("0.000");
 
-	private static Integer population = 100;
+	private static Integer population = 125;
 
 	private static Integer toMate = 50;
 
-	private static Integer toMutate = 10;
+	private static Integer toMutate = 25;
 
 	public static void main(String[] args) throws IOException {
 
