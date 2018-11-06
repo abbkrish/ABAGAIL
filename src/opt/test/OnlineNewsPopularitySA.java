@@ -43,7 +43,7 @@ public class OnlineNewsPopularitySA extends OnlineNewsPopularityBase {
 	
 	private static Double temperature = 1E8;
 
-	private static Double coolingExponent = 0.900;
+	private static Double coolingExponent = 0.6;
 
 	public static void main(String[] args) throws IOException {
 
